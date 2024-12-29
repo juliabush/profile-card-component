@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    /* Fonts */
+    --font-style: 'Kumbh Sans';
+    --fw-light: 400;
+    --fw-bold: 600;
+    --font-size: 1.125rem;
+
+    /* Colors */
+    --clr-background-aqua: hsl(185, 75%, 39%);
+    --clr-title-stats-darkgrey: hwb(229 18% 72%);
+    --clr-text-description-lightgrey:  hsl(227, 10%, 46%);
+    --clr-grey:  hsl(0, 0%, 59%);
+}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  html, body {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+    font-family: var(--font-style);
+    font-size: var(--font-size);
+  }
+  .profile-card__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  [class*="title"] {
+    font-size: 1.5rem;
+    color: var(--clr-title-stats-darkgrey);
+    font-weight: var(--fw-bold);
+  }
+  p {
+    color: var(--clr-text-description-lightgrey);
+  }
+  .profile-card__flexgroup {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .stat__flexgroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  [class*="column"] {
+    display: flex;
+    flex-direction: column;
+  }
